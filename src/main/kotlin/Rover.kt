@@ -19,9 +19,16 @@ class Rover {
                     "S" -> direction = "W"
                     "W" -> direction = "N"
                 }
+            } else if (command == "M") {
+                when (direction) {
+                    "N" -> y++
+                    "E" -> x++
+                    "S" -> y--
+                    "W" -> x--
+                }
             }
         }
 
-        return "0.0.${direction}"
+        return "0.${y}.${direction}"
     }
 }
