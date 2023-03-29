@@ -29,6 +29,6 @@ class Rover {
             }
         }
 
-        return "0.${y}.${direction}"
+        return "${x}.${y}.${direction}"
     }
 }

@@ -14,7 +14,9 @@ class RoverTests {
         "RRR,0.0.W",
         "RRRR,0.0.N",
         "M,0.1.N",
-        "MM,0.2.N"
+        "RM,1.0.E",
+        "RRM,0.-1.S",
+        "LM,-1.0.W",
     )
     fun `rover should return a position based on the commands`(commands: String, expectedPosition: String) {
         val rover = Rover()
