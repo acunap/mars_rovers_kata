@@ -6,14 +6,11 @@ class Rover {
     fun processCommands(commands: String): String {
         for (command in commands.split("")) {
             if (command == "L") {
-                if (direction == "N") {
-                    direction = "W"
-                } else if (direction == "W") {
-                    direction = "S"
-                } else if (direction == "S") {
-                    direction = "E"
-                } else if (direction == "E") {
-                    direction = "N"
+                when (direction) {
+                    "N" -> direction = "W"
+                    "W" -> direction = "S"
+                    "S" -> direction = "E"
+                    "E" -> direction = "N"
                 }
             }
         }
