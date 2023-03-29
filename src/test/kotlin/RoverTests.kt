@@ -1,10 +1,17 @@
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.assertThrows
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 class RoverTests {
-    @Test
-    fun `rover should return an exception because is not implemented yet`() {
+    @ParameterizedTest(name = "rover should return {1} based on the command {0}")
+    @CsvSource(
+        "L,0.0.W",
+        "LL,0.0.S",
+        "LLL,0.0.E",
+        "LLLL,0.0.N"
+    )
+    fun `rover should return a position based on the commands`(commands: String, expectedPosition: String) {
         val rover = Rover()
-        assertThrows<NotImplementedError> { rover.processCommands("") }
+        assertEquals(expectedPosition, rover.processCommands(commands))
     }
 }
