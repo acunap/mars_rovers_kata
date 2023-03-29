@@ -36,9 +36,9 @@ class Rover {
 
     private fun moveForwards() {
         when (direction) {
-            "N" -> y++
+            "N" -> moveY(1)
             "E" -> x++
-            "S" -> y--
+            "S" -> moveY(-1)
             "W" -> x--
             else -> {}
         }
@@ -46,10 +46,18 @@ class Rover {
 
     private fun moveBackwards() {
         when (direction) {
-            "N" -> y--
+            "N" -> moveY(-1)
             "E" -> x--
-            "S" -> y++
+            "S" -> moveY(1)
             "W" -> x++
+        }
+    }
+
+    private fun moveY(distance: Int) {
+        y = when {
+            y + distance > 9 -> 0
+            y + distance < 0 -> 9
+            else -> y + distance
         }
     }
 }
