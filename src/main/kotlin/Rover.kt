@@ -26,6 +26,13 @@ class Rover {
                     "S" -> y--
                     "W" -> x--
                 }
+            } else if (command == "B") {
+                when (direction) {
+                    "N" -> y--
+                    "E" -> x--
+                    "S" -> y++
+                    "W" -> x++
+                }
             }
         }
 
