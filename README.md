@@ -31,8 +31,8 @@ other side of the row/column. Examples:
 The rover is in the starting point `0.0.N` and receives `BBRMMLM`:
 - `B` moves to `0.9.N`.
 - `B` moves to `0.8.N`.
-- `R` rotates to `0.9.E`.
-- `M` moves to `1.9.E`.
-- `M` moves to `2.9.E`.
-- `L` moves to `2.9.N`.
-- `M` moves to `2.0.N`.
+- `R` rotates to `0.8.E`.
+- `M` moves to `1.8.E`.
+- `M` moves to `2.8.E`.
+- `L` moves to `2.8.N`.
+- `M` moves to `2.9.N`.
