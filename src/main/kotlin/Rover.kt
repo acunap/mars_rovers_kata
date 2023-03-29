@@ -12,6 +12,13 @@ class Rover {
                     "S" -> direction = "E"
                     "E" -> direction = "N"
                 }
+            } else if (command == "R") {
+                when (direction) {
+                    "N" -> direction = "E"
+                    "E" -> direction = "S"
+                    "S" -> direction = "W"
+                    "W" -> direction = "N"
+                }
             }
         }
 

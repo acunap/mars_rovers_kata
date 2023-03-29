@@ -8,7 +8,11 @@ class RoverTests {
         "L,0.0.W",
         "LL,0.0.S",
         "LLL,0.0.E",
-        "LLLL,0.0.N"
+        "LLLL,0.0.N",
+        "R,0.0.E",
+        "RR,0.0.S",
+        "RRR,0.0.W",
+        "RRRR,0.0.N",
     )
     fun `rover should return a position based on the commands`(commands: String, expectedPosition: String) {
         val rover = Rover()
