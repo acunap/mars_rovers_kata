@@ -5,33 +5,38 @@ class Rover {
 
     fun processCommands(commands: String): String {
         for (command in commands.split("")) {
-            if (command == "L") {
-                when (direction) {
-                    "N" -> direction = "W"
-                    "W" -> direction = "S"
-                    "S" -> direction = "E"
-                    "E" -> direction = "N"
+            when (command) {
+                "L" -> {
+                    when (direction) {
+                        "N" -> direction = "W"
+                        "W" -> direction = "S"
+                        "S" -> direction = "E"
+                        "E" -> direction = "N"
+                    }
                 }
-            } else if (command == "R") {
-                when (direction) {
-                    "N" -> direction = "E"
-                    "E" -> direction = "S"
-                    "S" -> direction = "W"
-                    "W" -> direction = "N"
+                "R" -> {
+                    when (direction) {
+                        "N" -> direction = "E"
+                        "E" -> direction = "S"
+                        "S" -> direction = "W"
+                        "W" -> direction = "N"
+                    }
                 }
-            } else if (command == "M") {
-                when (direction) {
-                    "N" -> y++
-                    "E" -> x++
-                    "S" -> y--
-                    "W" -> x--
+                "M" -> {
+                    when (direction) {
+                        "N" -> y++
+                        "E" -> x++
+                        "S" -> y--
+                        "W" -> x--
+                    }
                 }
-            } else if (command == "B") {
-                when (direction) {
-                    "N" -> y--
-                    "E" -> x--
-                    "S" -> y++
-                    "W" -> x++
+                "B" -> {
+                    when (direction) {
+                        "N" -> y--
+                        "E" -> x--
+                        "S" -> y++
+                        "W" -> x++
+                    }
                 }
             }
         }
